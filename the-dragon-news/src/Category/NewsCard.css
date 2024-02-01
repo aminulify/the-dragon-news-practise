@@ -1,0 +1,66 @@
+.news-card{
+    gap: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 5px;
+}
+.author-img img{
+    width: 50px;
+    border-radius: 50%;
+}
+.card-header-section{
+    background-color: rgb(234, 234, 234);
+    border-radius: 5px;
+    padding: 2px 15px;
+}
+.card-heading-distribution{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-heading-distribution aside{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.author-name p{
+    margin-bottom: 0;
+    color: rgb(127, 127, 127);
+}
+.header-icons{
+    font-size: 23px;
+    color: rgb(146, 146, 146);
+}
+.news-card>.card-title{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 20px 15px;
+}
+.news-card>.thumbnail img{
+    width: 100%;
+    padding: 0 8px;
+}
+.news-card > .description{
+    margin: 10px;
+}
+.news-card > hr{
+    margin: 20px 10px 0 10px;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px 0 10px;
+    align-items: center;
+}
+.star-icons{
+    color: rgb(255, 145, 0);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-weight: 500;
+}
+.views{
+    font-size: 15px;
+    color: rgb(110, 110, 110);
+}

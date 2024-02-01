@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "react-fast-marquee": "^1.6.3",
+    "react-icons": "^5.0.1",
+    "react-spinners": "^0.13.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

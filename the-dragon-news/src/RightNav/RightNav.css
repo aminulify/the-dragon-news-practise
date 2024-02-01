@@ -1,0 +1,8 @@
+.rightside-img{
+    background-image: url(../../src/assets/bg.png);
+    padding: 100px 0;
+}
+.right-side-heading{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
