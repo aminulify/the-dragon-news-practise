@@ -1,12 +1,17 @@
-import React, { useContext, useState } from 'react';
+import React, { Children, useContext, useState } from 'react';
 import Header from '../Shared/Header/Header';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button, Container } from 'react-bootstrap';
 import './Login.css'
 import { AuthContext } from '../Provider/AuthProvider';
+import Snipper from '../Snippers/Snipper';
 
 const Login = () => {
+    const location = useLocation();
+    // console.log(location);
+    const from = location?.state?.from?.pathname || '/';
 
+    // snipper 
     const {signInUser} = useContext(AuthContext);
     const [error,setError] = useState();
     const navigate = useNavigate();
@@ -22,14 +27,17 @@ const Login = () => {
         signInUser(email,password)
         .then(result=>{
             const loggedIn = result.user;
-            console.log(loggedIn);
+            // console.log(loggedIn);
             
-            navigate('/');
+            navigate(from, {replace: true});
+            // {replace: true} it clear the history
+    
 
         })
         .catch(error=>{
             setError('*Wrong email and password...')
             console.log(error);
+       
         })
         
     }

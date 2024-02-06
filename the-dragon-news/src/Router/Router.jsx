@@ -8,6 +8,8 @@ import News from '../layout/Main/News';
 import LoginLayout from '../LoginLayout/LoginLayout';
 import Login from '../LoginLayout/Login';
 import Register from '../LoginLayout/Register';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import Terms from '../Shared/Terms/Terms';
 
 const router = createBrowserRouter([
     {
@@ -34,7 +36,7 @@ const router = createBrowserRouter([
 
             {
                 path: '/news/:id',
-                element: <News></News>,
+                element: <PrivateRoute><News></News></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
             }
         ]
@@ -50,6 +52,10 @@ const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Register></Register>
+            },
+            {
+                path: 'terms',
+                element: <Terms></Terms>
             }
         ]
     }
