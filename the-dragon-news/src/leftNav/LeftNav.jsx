@@ -10,7 +10,7 @@ const LeftNav = () => {
     const navigation = useNavigation();
 
     useEffect(()=>{
-        fetch('https://the-news-dragon-server-seven-psi.vercel.app/categories')
+        fetch('https://the-dragon-news-server-teal-six.vercel.app/categories')
             .then(res=>res.json())
             .then(data=>setCategories(data))
             .catch(error=>console.log(error));
